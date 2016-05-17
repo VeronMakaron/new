@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+	function checkAnswers(){
+		var userAnswer1 = document.getElementById('puzzle1').value;
+		var userAnswer2 =document.getElementById('puzzle2').value;
+		var rightAnswer1 =['огурец','огурчик','огуречик','огурцы'];
+		var rightAnswer2 =['ель','ёлка','ёлочка','елка','елочка'];
+		var rightAnswerCount=0;
+			function askQuestion (userAnswer, rightAnswer){
+				var nrightAnswer=0;
+				if (rightAnswer.indexOf(userAnswer.toLowerCase())!=-1) {
+						nrightAnswer++;
+				}
+				return rightAnswerCount=rightAnswerCount+ nrightAnswer;
+			}
+	askQuestion(userAnswer1,rightAnswer1);
+	askQuestion(userAnswer2,rightAnswer2);
+	return alert('Вы дали '+ rightAnswerCount +' правильных ответов');
+
+	}
+
+</script>>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guessmulti.html">Угадайка мультиплеер</a></li>
+			<li><a href="BlackJack.html">BlackJack</a></li>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Игра в загадки</h2>
+	</div>
+	<div id="content">
+		
+		<h3>Отгадай загадки!</h3>  
+
+		<p>Без окон, без дверей-полна горница людей<p/>
+		<input type="text" id="puzzle1" />
+		
+		</br></br></br>
+		
+		<p>Зимой и летом одним цветом. <p/>
+		<input type="text" id="puzzle2" />
+
+		</br></br></br>
+
+		<input type="button" value="Ответить" onClick="checkAnswers()"/>
+
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 Veron
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+	function checkAnswers(){
+		var number=Math.round(Math.random()*100);
+		var user1_try =1;
+		var user2_try =1;
+
+		do{var user1_answer=parseInt(prompt('Угадывает игрок 1. Введите число от 1 до 100. Для выхода нажмите s :'));
+			if (user1_answer>=1 && user1_answer<=100) {
+			 	
+				if (user1_answer=='s') {
+					break;
+				}
+				if (user1_answer==number) {
+					alert(' Игрок 1 угадал c '+ user1_try +'попытки.');
+					break;
+				}
+				if (user1_answer<number) {
+					alert('загаданное число больше');
+					
+				}
+				if (user1_answer>number) {
+					alert('загаданное число меньше');
+					
+				}
+				user1_try++;
+			} else {
+				alert('Я же просил число от 1 до 100.');
+				}	
+
+			var user2_answer=parseInt(prompt('Угадывает игрок 2. Введите число от 1 до 100. Для выхода нажмите s :'));
+			if (user2_answer>=1 && user2_answer<=100) {
+				if (user2_answer==number) {
+					alert(' Игрок 2 угадал c '+ user2_try +'попытки.');
+					break;
+				}
+				if (user2_answer<number) {
+					alert('загаданное число больше');
+					
+				}
+				if (user2_answer>number) {
+					alert('загаданное число меньше');
+					
+				}
+				user2_try++;
+			} else {
+				alert('Я же просил число от 1 до 100.');
+				}	
+		} while (true);
+		alert(' До новых встреч!');
+
+	}
+
+</script>>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guessmulti.html">Угадайка мультиплеер</a></li>
+			<li><a href="BlackJack.html">BlackJack</a></li>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Игра в загадки</h2>
+	</div>
+	<div id="content">
+		
+		<h3>Угадай число!</h3>  
+
+		<p>Я загадал число от 1 до 100. Попробуй угадай! <p/>
+		<p>У тебя будет неограниченное количество попыток. После каждой попытки ты узнаешь, правильный ответ больше или меньше твоего ответа. Цель - угадать число за наименьшее количество попыток. <p/>
+		<p>Удачи тебе! <p/>
+		
+		
+		
+
+		</br></br></br>
+
+		<input type="button" value="Начать игру" onClick="checkAnswers()"/>
+
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 Veron
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>
